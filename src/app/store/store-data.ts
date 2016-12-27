@@ -13,24 +13,18 @@ export interface StoreData {
 }
 
 export interface MyStoreData {
-    weather: {
-        customers: List<any>,
-        weather: List<WeatherModel>
-    }
-
+    customers: List<any>;
+    weather: List<WeatherModel>;
 }
 
 
 export const INITIAL_STORE_DATA: StoreData = {
-
     threads: {},
     messages: {},
     participants: {}
 };
 
 export const INITIAL_WEATHER_DATA: MyStoreData = {
-    weather: {
-        customers: List<any>(),
-        weather: List<WeatherModel>()
-    }
+     customers: List<any>([1,2,3,4]),
+     weather: List<WeatherModel>()
 };

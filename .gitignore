@@ -26,6 +26,9 @@ npm-debug.log
 testem.log
 /typings
 
+/src/**/*.js
+/shared/**/*.js
+
 # e2e
 /e2e/*.js
 /e2e/*.map

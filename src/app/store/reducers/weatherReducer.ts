@@ -1,4 +1,4 @@
-import {StoreData} from "../store-data";
+import {StoreData, MyStoreData} from "../store-data";
 import {Action} from "@ngrx/store";
 import * as _ from 'lodash';
 import {List, Map} from 'immutable';
@@ -8,13 +8,14 @@ import {StoreModel} from "../model/StoreModel";
 
 
 
-export default (state: Map<string,any> = Map<string,any>(), action: any): Map<string,any> => {
+export default (state: MyStoreData, action: any): MyStoreData => {
 
     switch (action.type) {
         case WEATHER_LOADED_ACTION:
-            var m = new StoreModel(action.payload)
-            state = state.setIn(['customers'], List());
-            return state.setIn(['weather'], List([m]));
+            var m:WeatherModel = new WeatherModel(action.payload)
+            state.customers = state.customers = List<any>([1,2,3,Math.random()]);
+            state.weather = state.weather = List<WeatherModel>([m]);
+            return state;
 
         default:
             return state;

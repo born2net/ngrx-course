@@ -13,4 +13,8 @@ export class WeatherModel extends StoreModel {
         return this.getKey('temp');
     }
 
+    public getWeather2() {
+        return this.getKey('temp');
+    }
+
 }
