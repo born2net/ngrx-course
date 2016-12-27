@@ -13,6 +13,7 @@ export interface StoreData {
 }
 
 export interface MyStoreData {
+    local: Map<string,any>;
     customers: List<any>;
     weather: List<WeatherModel>;
 }
@@ -25,6 +26,7 @@ export const INITIAL_STORE_DATA: StoreData = {
 };
 
 export const INITIAL_WEATHER_DATA: MyStoreData = {
-     customers: List<any>([1,2,3,4]),
-     weather: List<WeatherModel>()
+    local: Map<string,any>(),
+    customers: List<any>([1, 2, 3, 4]),
+    weather: List<WeatherModel>()
 };

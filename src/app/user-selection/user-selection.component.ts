@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {ApplicationState} from "../store/application-state";
 import {Store} from "@ngrx/store";
 import {SelectUserAction, WeatherLoadedAction, WeatherLoad} from "../store/actions";
@@ -9,6 +9,7 @@ import {List} from 'immutable';
 
 @Component({
     selector: 'user-selection',
+    changeDetection: ChangeDetectionStrategy.OnPush,
     templateUrl: './user-selection.component.html',
     styleUrls: ['./user-selection.component.css']
 })
