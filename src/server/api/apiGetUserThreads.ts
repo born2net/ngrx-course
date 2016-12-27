@@ -39,5 +39,23 @@ export function apiGetUserThreads(app:Application) {
 
     });
 
+    app.route('/api/Weather/:zip').get((req: Request, res: Response) => {
+
+        res.status(200).json({temp: Math.random()});
+
+    });
+
+    app.route('/api/Weather').get((req: Request, res: Response) => {
+
+        res.status(200).json({temp: 80});
+
+    });
+
+    app.route('/api/Weather/*').get((req: Request, res: Response) => {
+
+        res.status(200).json({temp: 80});
+
+    });
+
 
 }

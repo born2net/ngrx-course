@@ -12,7 +12,7 @@
     "api-server": "./node_modules/.bin/ts-node ./src/server/server.ts",
     "api-server:debug": "./node_modules/.bin/ts-node $NODE_DEBUG_OPTION ./src/server/server.ts"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/common": "2.2.3",
     "@angular/compiler": "2.2.3",
@@ -26,8 +26,11 @@
     "@ngrx/effects": "^2.0.0",
     "@ngrx/store": "^2.2.1",
     "@ngrx/store-devtools": "^3.2.2",
+    "@types/immutable": "^3.8.6",
+    "angular2-uuid": "^1.1.0",
     "core-js": "^2.4.1",
     "express": "^4.14.0",
+    "immutable": "^3.8.1",
     "lodash": "^4.17.2",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",

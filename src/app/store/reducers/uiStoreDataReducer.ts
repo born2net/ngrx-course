@@ -28,7 +28,7 @@ export function storeData(state: StoreData, action:Action) : StoreData {
 }
 
 
-function handleLoadUserThreadsAction(state:StoreData, action: UserThreadsLoadedAction): StoreData {
+function handleLoadUserThreadsAction(state:StoreData, action: any): any {
     return {
         participants: _.keyBy(action.payload.participants, 'id'),
         messages: _.keyBy(action.payload.messages, 'id'),
@@ -37,7 +37,7 @@ function handleLoadUserThreadsAction(state:StoreData, action: UserThreadsLoadedA
 }
 
 
-function handleSendNewMessageAction(state:StoreData, action: SendNewMessageAction) {
+function handleSendNewMessageAction(state:StoreData, action: any) {
 
     const newStoreState = Object.assign({}, state);
 

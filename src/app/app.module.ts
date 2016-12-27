@@ -17,6 +17,7 @@ import {LoadThreadsEffectService} from "./store/effects/load-threads-effect.serv
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {uiState} from "./store/reducers/uiStateReducer";
 import {storeData} from "./store/reducers/uiStoreDataReducer";
+import weatherReducer from "./store/reducers/weatherReducer";
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import {storeData} from "./store/reducers/uiStoreDataReducer";
     BrowserModule,
     FormsModule,
     HttpModule,
-      StoreModule.provideStore(combineReducers({uiState,storeData}), INITIAL_APPLICATION_STATE),
+      StoreModule.provideStore(combineReducers({uiState,storeData, weatherReducer}), INITIAL_APPLICATION_STATE),
       EffectsModule.run(LoadThreadsEffectService),
       StoreDevtoolsModule.instrumentOnlyWithExtension()
   ],

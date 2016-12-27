@@ -1,11 +1,9 @@
-
-
-
-
 import {Action} from "@ngrx/store";
 import {AllUserData} from "../../../shared/to/all-user-data";
 
 
+export const LOAD_WEATHER_ACTION = 'LOAD_WEATHER_ACTION';
+export const WEATHER_LOADED_ACTION = 'WEATHER_LOADED_ACTION';
 export const USER_THREADS_LOADED_ACTION = 'USER_THREADS_LOADED_ACTION';
 export const LOAD_USER_THREADS_ACTION = 'LOAD_USER_THREADS_ACTION';
 export const THREAD_SELECTED_ACTION = 'THREAD_SELECTED_ACTION';
@@ -30,6 +28,26 @@ export class UserThreadsLoadedAction implements Action {
     readonly type = USER_THREADS_LOADED_ACTION;
 
     constructor(public payload?:AllUserData) {
+
+    }
+
+}
+
+
+export class WeatherLoad implements Action {
+
+    readonly type = LOAD_WEATHER_ACTION;
+
+    constructor(public payload?:string) {
+
+    }
+
+}
+
+export class WeatherLoadedAction implements Action {
+
+    readonly type = WEATHER_LOADED_ACTION;
+    constructor(public payload?: string) {
 
     }
 

@@ -30,7 +30,7 @@ export function uiState(state: UiState = INITIAL_UI_STATE, action: Action) : UiS
 
 }
 
-function handleSelectUserAction(state: UiState, action: SelectUserAction) {
+function handleSelectUserAction(state: UiState, action: any) {
 
     const newUiState = Object.assign({}, state);
 
